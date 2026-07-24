@@ -1,0 +1,331 @@
+تمت إضافة رقم هاتفك بنجاح في الكود بالصيغة الدولية (212615519905).
+الآن بمجرد أن تقوم أي زبونة بالضغط على زر **"إرسال الطلب عبر الواتساب"**، ستتوصل بالرسالة مباشرة على رقمك المباشر مع جميع تفاصيل الطلب.
+إليك الكود الكامل الجاهز للنسخ والحفظ باسم **index.html**:
+```html:صفحة بيع سيروم شعر LANEMAY - مربط بالواتساب:index.html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيروم LANEMAY الأصلي بماء الأرز والبيوتين - اطلبي الآن عبر الواتساب</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-rose-50/30 text-slate-800 pb-12">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-rose-600 to-pink-600 text-white text-center py-2.5 px-4 text-xs md:text-sm font-bold shadow-md sticky top-0 z-50 flex justify-center items-center gap-2">
+        <i class="fa-solid fa-truck-fast animate-pulse"></i>
+        <span>عرض خاص اليوم: التوصيل مجاني + الدفع بعد المعاينة عند الاستلام!</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 pt-4">
+
+        <!-- Header / Branding -->
+        <header class="text-center my-4">
+            <span class="bg-rose-100 text-rose-800 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">المنتج الأكثر طلباً لسنة 2026</span>
+            <h1 class="text-2xl md:text-4xl font-extrabold text-slate-900 mt-2 leading-tight">
+                استرجعي كثافة شعرك وحيويته مع سيروم LANEMAY الأصلي 🌿
+            </h1>
+            <p class="text-slate-600 text-sm md:text-base mt-2 font-medium">
+                بتركيبة ماء الأرز الأسود العضوي والبيوتين لإيقاف التساقط وتعبئة الفراغات
+            </p>
+        </header>
+
+        <!-- Product Image Gallery / Banner -->
+        <div class="bg-white p-3 rounded-2xl shadow-lg border border-rose-100 mb-6">
+            <div class="relative rounded-xl overflow-hidden bg-slate-100 aspect-square md:aspect-[4/3] flex items-center justify-center">
+                <img id="mainProductImg" src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=80" alt="سيروم العناية بالشعر بماء الأرز والبيوتين" class="w-full h-full object-cover">
+                <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-full shadow-lg">
+                    تخفيض 40% لفترة محدودة
+                </div>
+            </div>
+            <!-- Features badges -->
+            <div class="grid grid-cols-3 gap-2 mt-3 text-center text-xs font-bold text-slate-700">
+                <div class="bg-rose-50 p-2 rounded-lg border border-rose-100">
+                    <i class="fa-solid fa-leaf text-emerald-600 text-base mb-1 block"></i>
+                    مكونات عضوية 100%
+                </div>
+                <div class="bg-rose-50 p-2 rounded-lg border border-rose-100">
+                    <i class="fa-solid fa-ban text-rose-600 text-base mb-1 block"></i>
+                    خالٍ من السيليكون
+                </div>
+                <div class="bg-rose-50 p-2 rounded-lg border border-rose-100">
+                    <i class="fa-solid fa-shield-halved text-amber-600 text-base mb-1 block"></i>
+                    آمن ومعتمد
+                </div>
+            </div>
+        </div>
+
+        <!-- Timer Card -->
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4 text-center mb-6 shadow-sm">
+            <p class="text-xs font-bold text-amber-900 mb-2">⚡ يسري العرض المباشر حتى انتهاء الكمية المخصصة:</p>
+            <div class="flex justify-center items-center gap-3 text-slate-900 font-black">
+                <div class="bg-white px-3 py-2 rounded-lg border border-amber-200 shadow-sm min-w-[55px]">
+                    <span id="hours" class="text-xl text-amber-600">02</span>
+                    <span class="block text-[10px] font-medium text-slate-500">ساعة</span>
+                </div>
+                <span>:</span>
+                <div class="bg-white px-3 py-2 rounded-lg border border-amber-200 shadow-sm min-w-[55px]">
+                    <span id="minutes" class="text-xl text-amber-600">45</span>
+                    <span class="block text-[10px] font-medium text-slate-500">دقيقة</span>
+                </div>
+                <span>:</span>
+                <div class="bg-white px-3 py-2 rounded-lg border border-amber-200 shadow-sm min-w-[55px]">
+                    <span id="seconds" class="text-xl text-amber-600">30</span>
+                    <span class="block text-[10px] font-medium text-slate-500">ثانية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 mb-6 space-y-4">
+            <h2 class="text-lg font-extrabold text-slate-900 border-b pb-3 flex items-center gap-2">
+                <i class="fa-solid fa-sparkles text-rose-500"></i>
+                لماذا تحتاجين هذا السيروم خصيصاً لشعرك؟
+            </h2>
+
+            <ul class="space-y-3 text-slate-700 text-sm md:text-base">
+                <li class="flex items-start gap-3">
+                    <span class="bg-emerald-100 text-emerald-700 rounded-full p-1 text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                    <div>
+                        <strong>تعبئة الفراغات وإنبات الشعر:</strong> يحفز بصيلات الشعر الخاملة بفضل تركيز ماء الأرز الأسود العضوي.
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-emerald-100 text-emerald-700 rounded-full p-1 text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                    <div>
+                        <strong>إيقاف التساقط الشديد:</strong> يغذي الفروة بفيتامينات البيوتين والسمسم الأسود لتقوية الجذور من الداخل.
+                    </div>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-emerald-100 text-emerald-700 rounded-full p-1 text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                    <div>
+                        <strong>كثافة وحجم جذاب (Volume):</strong> يمنح شعرك سمكاً ومظهراً ممتلئاً بدون أي ملمس دهني.
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Order Form Section (WhatsApp Direct) -->
+        <div id="orderFormSection" class="bg-white rounded-2xl p-6 shadow-xl border-2 border-emerald-500 relative overflow-hidden mb-8">
+            <div class="bg-emerald-600 text-white text-center py-2.5 font-bold text-sm -mx-6 -mt-6 mb-6 flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>إستمارة الطلب المباشر عبر الواتساب</span>
+            </div>
+
+            <!-- Package Selection -->
+            <div class="mb-6">
+                <label class="block text-sm font-bold text-slate-800 mb-3">1. اختاري العرض المناسب لكِ:</label>
+                <div class="space-y-3">
+                    
+                    <!-- Offer 1 -->
+                    <label onclick="selectPackage(1, 199, 'عبوة واحدة (تجربة)')" class="package-option block relative border-2 border-slate-200 rounded-xl p-4 cursor-pointer hover:border-emerald-400 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="1" class="w-5 h-5 text-emerald-600 focus:ring-emerald-500">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 block text-sm md:text-base">عبوة واحدة (تجربة)</span>
+                                    <span class="text-xs text-slate-500">+ مصاريف الشحن العادية (30 د.م)</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-lg font-black text-emerald-600">199 د.م</span>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Offer 2 (Best Seller) -->
+                    <label onclick="selectPackage(2, 299, 'عبوتين (العرض الأكثر طلباً)')" class="package-option block relative border-2 border-emerald-500 bg-emerald-50/40 rounded-xl p-4 cursor-pointer shadow-sm">
+                        <span class="absolute -top-3 left-4 bg-emerald-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase">الأكثر طلباً ⭐</span>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="2" checked class="w-5 h-5 text-emerald-600 focus:ring-emerald-500">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 block text-sm md:text-base">عبوتين (كورس علاج مكثف)</span>
+                                    <span class="text-xs text-emerald-700 font-bold"><i class="fa-solid fa-truck"></i> توصيل مجاني + توفير 100 د.م</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-lg font-black text-emerald-600">299 د.م</span>
+                                <span class="text-xs text-slate-400 line-through block">398 د.م</span>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Offer 3 -->
+                    <label onclick="selectPackage(3, 399, '3 عبوات (توفير العائلة)')" class="package-option block relative border-2 border-slate-200 rounded-xl p-4 cursor-pointer hover:border-emerald-400 transition">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="package" value="3" class="w-5 h-5 text-emerald-600 focus:ring-emerald-500">
+                                <div>
+                                    <span class="font-extrabold text-slate-900 block text-sm md:text-base">3 عبوات (عرض التوفير الأكبر)</span>
+                                    <span class="text-xs text-emerald-700 font-bold"><i class="fa-solid fa-truck"></i> توصيل مجاني</span>
+                                </div>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-lg font-black text-emerald-600">399 د.م</span>
+                                <span class="text-xs text-slate-400 line-through block">597 د.م</span>
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Customer Details Form -->
+            <form id="orderForm" onsubmit="handleWhatsAppOrder(event)" class="space-y-4">
+                <label class="block text-sm font-bold text-slate-800 mb-1">2. أدخلي معلوماتك لاستلام الطلب عبر الواتساب:</label>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">الاسم الكامل *</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="fullName" required placeholder="مثال: سارة العلمي" class="w-full pr-10 pl-3 py-3 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">رقم الهاتف *</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400"><i class="fa-solid fa-phone"></i></span>
+                        <input type="tel" id="phoneNumber" required placeholder="06XXXXXXXX" pattern="[0-9]{10}" title="يرجى إدخال رقم هاتف مكون من 10 أرقام" class="w-full pr-10 pl-3 py-3 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50 text-left dir-ltr">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">المدينة / العنوان *</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400"><i class="fa-solid fa-location-dot"></i></span>
+                        <input type="text" id="cityAddress" required placeholder="مثال: الدار البيضاء - حي المعاريف" class="w-full pr-10 pl-3 py-3 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50">
+                    </div>
+                </div>
+
+                <!-- Price Summary Box -->
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs space-y-1.5">
+                    <div class="flex justify-between text-slate-600">
+                        <span>العرض المختار:</span>
+                        <span id="summaryPackage" class="font-bold text-slate-800">عبوتين (العرض الأكثر طلباً)</span>
+                    </div>
+                    <div class="flex justify-between text-slate-600">
+                        <span>الشحن والتوصيل:</span>
+                        <span id="summaryShipping" class="font-bold text-emerald-600">مجاني</span>
+                    </div>
+                    <div class="border-t pt-1.5 flex justify-between text-sm font-extrabold text-slate-900">
+                        <span>المجموع الصافي عند الاستلام:</span>
+                        <span id="summaryTotal" class="text-emerald-600 text-base">299 د.م</span>
+                    </div>
+                </div>
+
+                <!-- Submit WhatsApp Button -->
+                <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-extrabold py-4 px-6 rounded-xl shadow-lg text-base md:text-lg flex items-center justify-center gap-2 transform active:scale-95 transition">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>إرسال الطلب عبر الواتساب الآن</span>
+                </button>
+
+                <p class="text-center text-[11px] text-slate-500 mt-2">
+                    🔒 الدفع عند الاستلام - سيتم توجيهك مباشرة للواتساب للضغط على إرسال.
+                </p>
+            </form>
+        </div>
+
+        <!-- Sticky Floating Button for Mobile -->
+        <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3 shadow-2xl z-40 md:hidden flex items-center justify-between gap-3">
+            <div>
+                <span class="block text-[10px] text-slate-500 font-bold">السعر المفضل:</span>
+                <span class="text-lg font-black text-emerald-600">299 د.م</span>
+            </div>
+            <a href="#orderFormSection" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow-md">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>طلب عبر الواتساب</span>
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        // رقم الواتساب المباشر الخاص بك
+        const MY_WHATSAPP_NUMBER = "212615519905"; 
+
+        // Package state
+        let selectedPrice = 299;
+        let selectedPackageName = 'عبوتين (العرض الأكثر طلباً)';
+        let selectedShippingCost = 0;
+
+        function selectPackage(count, price, name) {
+            selectedPrice = price;
+            selectedPackageName = name;
+            selectedShippingCost = (count === 1) ? 30 : 0; 
+
+            // Update UI Summary
+            document.getElementById('summaryPackage').innerText = name;
+            document.getElementById('summaryShipping').innerText = selectedShippingCost === 0 ? 'مجاني' : `${selectedShippingCost} د.م`;
+            document.getElementById('summaryTotal').innerText = `${price + selectedShippingCost} د.م`;
+        }
+
+        // WhatsApp Direct Submission
+        function handleWhatsAppOrder(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const address = document.getElementById('cityAddress').value;
+            const total = selectedPrice + selectedShippingCost;
+
+            // Format message for WhatsApp
+            const message = `مرحباً، أريد تأكيد طلب سيروم LANEMAY للشعر 🌿
+
+📋 *تفاصيل الطلب:*
+• *الاسم الكامل:* ${name}
+• *رقم الهاتف:* ${phone}
+• *المدينة والعنوان:* ${address}
+• *العرض المختار:* ${selectedPackageName}
+
+💰 *المجموع الإجمالي عند الاستلام:* ${total} درهم (الدفع عند الاستلام)`;
+
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.location.href = whatsappUrl;
+        }
+
+        // Simple Timer
+        function startTimer() {
+            let h = 2, m = 45, s = 30;
+            setInterval(() => {
+                if (s > 0) {
+                    s--;
+                } else {
+                    s = 59;
+                    if (m > 0) {
+                        m--;
+                    } else {
+                        m = 59;
+                        if (h > 0) h--;
+                    }
+                }
+                document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+                document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+                document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+            }, 1000);
+        }
+
+        window.onload = startTimer;
+    </script>
+</body>
+</html>
+
+```
