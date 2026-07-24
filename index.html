@@ -3,74 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيروم LANEMAY الأصلي لإنبات وتكثيف الشعر</title>
+    <title>سيروم LANEMAY الأصلي لإنبات وتكثيف الشعر - المملكة العربية السعودية</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Tajawal', sans-serif;
         }
 
         body {
-            background-color: #f4f6f8;
-            color: #2c3e50;
+            background-color: #f8fafc;
+            color: #1e293b;
             direction: rtl;
-            padding-bottom: 40px;
+            padding-bottom: 50px;
         }
 
-        /* Top Announcement Bar */
-        .top-banner {
-            background: linear-gradient(90deg, #11998e, #38ef7d);
-            color: #fff;
+        /* شريط التوصيل العلوي */
+        .top-bar {
+            background: linear-gradient(90deg, #059669, #10b981);
+            color: #ffffff;
             text-align: center;
-            padding: 10px 15px;
-            font-size: 14px;
+            padding: 12px 15px;
+            font-size: 15px;
             font-weight: 700;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Container */
+        /* الحاوية الرئيسية */
         .container {
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
             padding: 15px;
         }
 
-        /* Header Title */
-        .product-title {
-            text-align: center;
-            font-size: 22px;
-            font-weight: 800;
-            color: #1a252f;
-            margin-bottom: 15px;
-            line-height: 1.4;
-        }
-
-        .badge-organic {
+        /* عنوان المنتج */
+        .badge-tag {
             display: inline-block;
-            background-color: #e8f5e9;
-            color: #2e7d32;
-            padding: 4px 12px;
+            background-color: #ecfdf5;
+            color: #047857;
+            padding: 6px 14px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 700;
             margin-bottom: 10px;
+            border: 1px solid #a7f3d0;
         }
 
-        /* Media Container (Video & Image) */
-        .media-box {
-            background: #fff;
+        .product-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        /* قسم الميديا (الفيديو والصور) */
+        .media-card {
+            background: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
             margin-bottom: 20px;
-            border: 1px solid #e1e8ed;
+            border: 1px solid #e2e8f0;
         }
 
-        .video-container {
+        .video-box {
             position: relative;
             width: 100%;
             background: #000;
@@ -80,32 +82,30 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #f1f5f9;
         }
 
         .product-img {
             width: 100%;
             height: auto;
             display: block;
-            object-fit: cover;
         }
 
-        /* Features List */
-        .features-card {
-            background: #fff;
+        /* مميزات المنتج */
+        .features-box {
+            background: #ffffff;
             padding: 20px;
             border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
         }
 
-        .features-card h3 {
+        .features-box h3 {
             font-size: 18px;
-            color: #27ae60;
+            color: #047857;
             margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-weight: 800;
         }
 
         .features-list {
@@ -113,11 +113,13 @@
         }
 
         .features-list li {
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 15px;
             display: flex;
             align-items: center;
-            border-bottom: 1px dashed #eee;
+            border-bottom: 1px dashed #e2e8f0;
+            color: #334155;
+            font-weight: 500;
         }
 
         .features-list li:last-child {
@@ -129,222 +131,229 @@
             font-size: 18px;
         }
 
-        /* Offers Section */
-        .offers-title {
+        /* العروض والأسعار بالريال السعودي */
+        .section-title {
             text-align: center;
-            font-size: 19px;
-            font-weight: 700;
-            margin-bottom: 12px;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #0f172a;
         }
 
-        .offer-option {
-            background: #fff;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 15px;
+        .offer-card {
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-radius: 14px;
+            padding: 16px;
             margin-bottom: 12px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: 0.2s;
+            transition: all 0.2s ease;
             position: relative;
         }
 
-        .offer-option.active {
-            border-color: #27ae60;
+        .offer-card.selected {
+            border-color: #10b981;
             background-color: #f0fdf4;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
         }
 
-        .offer-tag {
+        .popular-badge {
             position: absolute;
-            top: -10px;
+            top: -12px;
             left: 15px;
-            background: #e74c3c;
-            color: #fff;
+            background: #ef4444;
+            color: #ffffff;
             font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 800;
         }
 
-        .offer-info h4 {
-            font-size: 16px;
-            color: #2c3e50;
+        .offer-details h4 {
+            font-size: 17px;
+            color: #0f172a;
+            font-weight: 700;
         }
 
-        .offer-info p {
+        .offer-details p {
             font-size: 13px;
-            color: #7f8c8d;
+            color: #64748b;
+            margin-top: 2px;
         }
 
         .offer-price {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
-            color: #27ae60;
+            color: #059669;
         }
 
-        /* Order Form */
-        .form-card {
-            background: #fff;
+        .offer-price small {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* نموذج الطلب */
+        .form-box {
+            background: #ffffff;
             padding: 22px;
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border: 2px solid #27ae60;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid #10b981;
         }
 
-        .form-card h3 {
+        .form-box h3 {
             text-align: center;
             font-size: 20px;
-            color: #2c3e50;
+            color: #0f172a;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .input-field {
             margin-bottom: 15px;
         }
 
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-group label {
+        .input-field label {
             display: block;
             font-size: 14px;
             font-weight: 700;
             margin-bottom: 6px;
-            color: #34495e;
+            color: #334155;
         }
 
-        .input-group input, .input-group select {
+        .input-field input, .input-field select {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            padding: 13px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
             font-size: 15px;
             outline: none;
-            transition: 0.3s;
+            transition: 0.2s;
+            background-color: #f8fafc;
         }
 
-        .input-group input:focus {
-            border-color: #27ae60;
-            box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+        .input-field input:focus, .input-field select:focus {
+            border-color: #10b981;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
 
-        .btn-submit {
+        .btn-order {
             width: 100%;
             background: #25D366;
-            color: white;
+            color: #ffffff;
             border: none;
             padding: 16px;
             font-size: 18px;
             font-weight: 800;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+            margin-top: 10px;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
-        }
-
-        .guarantee {
+        .guarantee-bar {
             text-align: center;
             margin-top: 15px;
             font-size: 13px;
-            color: #7f8c8d;
+            color: #64748b;
             display: flex;
             justify-content: center;
             gap: 15px;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-banner">
-        🚚 التوصيل مجاني لجميع المدن + الدفع عند الاستلام
+    <div class="top-bar">
+        🇸🇦 توصيل سريع لجميع مناطق المملكة + الدفع عند الاستلام
     </div>
 
     <div class="container">
 
         <div style="text-align: center;">
-            <span class="badge-organic">🌿 منتج طبيعي 100% ورسمي</span>
+            <span class="badge-tag">🌿 سيروم طبيعي 100% ومضمون</span>
         </div>
-        <h1 class="product-title">سيروم LANEMAY بماء الأرز الأسود والإكليل لإنبات الشعر وتوقف التساقط</h1>
+        <h1 class="product-title">سيروم LANEMAY بماء الأرز الأسود والروزماري لإنبات الشعر وتكثيف الفراغات</h1>
 
-        <div class="media-box">
-            <div class="video-container">
-                <video controls autoplay muted loop playsinline poster="1000039602.jpg">
+        <div class="media-card">
+            <div class="video-box">
+                <video id="mainVideo" controls autoplay muted loop playsinline poster="1000039602.jpg">
                     <source src="1000039612.mp4" type="video/mp4">
                     متصفحك لا يدعم تشغيل الفيديو.
                 </video>
             </div>
-            <img src="1000039602.jpg" alt="LANEMAY Hair Serum" class="product-img">
+            <img src="1000039602.jpg" alt="LANEMAY Serum Saudi" class="product-img">
         </div>
 
-        <div class="features-card">
-            <h3>🌱 علاش هاد السيروم هو الحل الأفضل لشعرك؟</h3>
+        <div class="features-box">
+            <h3>🌱 لماذا يفضل عملاؤنا سيروم LANEMAY؟</h3>
             <ul class="features-list">
-                <li><span>✅</span> **تحفيز الإنبات:** يعيد إنبات الفراغات ويقوي البصيلات الضعيفة.</li>
-                <li><span>✅</span> **إيقاف التساقط:** يغذي فروة الراأس ويقلل التساقط بشكل ملحوظ.</li>
-                <li><span>✅</span> **تركيبة غنية:** بماء الأرز الأسود، زيت السمسم الأسود، والروزماري.</li>
-                <li><span>✅</span> **آمن 100%:** خالي من السيليكون، البارابين والمواد الكيميائية الضارة.</li>
+                <li><span>✅</span> <b>تحفيز إنبات الشعر:</b> يعالج الفراغات ويحفز البصيلات الضعيفة.</li>
+                <li><span>✅</span> <b>إيقاف التساقط:</b> يغذي فروة الرأس من الجذور ويقلل التساقط.</li>
+                <li><span>✅</span> <b>تركيبة طبيعية مكثفة:</b> بماء الأرز الأسود العضوي وزيت الروزماري والبيوتين.</li>
+                <li><span>✅</span> <b>آمن تماماً:</b> خالي من السيليكون والبارابين والمواد الكيميائية.</li>
             </ul>
         </div>
 
-        <h3 class="offers-title">🎁 اختر العرض المناسب لك:</h3>
-        
-        <div class="offer-option active" onclick="selectOffer(1, 199, 'عبوة واحدة (199 درهم)')" id="offer1">
-            <div class="offer-info">
+        <h3 class="section-title">🎁 اختر العرض المناسب لك:</h3>
+
+        <div class="offer-card" onclick="setOffer(1, 129, 'عبوة واحدة (129 ريال سعودي)')" id="offer1">
+            <div class="offer-details">
                 <h4>عبوة واحدة (1 قطعة)</h4>
-                <p>توصيل مجاني + دفع عند الاستلام</p>
+                <p>توصيل مجاني لجميع مناطق المملكة</p>
             </div>
-            <div class="offer-price">199 د.م</div>
+            <div class="offer-price">129 <small>ر.س</small></div>
         </div>
 
-        <div class="offer-option" onclick="selectOffer(2, 299, 'عبوتين - الأكثر طلباً (299 درهم)')" id="offer2">
-            <span class="offer-tag">الأكثر مبيعاً 🔥</span>
-            <div class="offer-info">
-                <h4>عبوتين (2 قطعتين)</h4>
-                <p>توفير 100 درهم + توصيل مجاني</p>
+        <div class="offer-card selected" onclick="setOffer(2, 199, 'عبوتين - الأكثر طلباً (199 ريال سعودي)')" id="offer2">
+            <span class="popular-badge">الأكثر طلباً في المملكة 🔥</span>
+            <div class="offer-details">
+                <h4>عبوتين (2 قطعة)</h4>
+                <p>وفر 59 ريال + توصيل مجاني</p>
             </div>
-            <div class="offer-price">299 د.م</div>
+            <div class="offer-price">199 <small>ر.س</small></div>
         </div>
 
-        <div class="form-card">
-            <h3>🛒 استمارة الطلب السريع</h3>
-            <form id="orderForm" onsubmit="sendToWhatsApp(event)">
+        <div class="form-card form-box">
+            <h3>🛒 نموذج الطلب السريع</h3>
+            <form id="saudiOrderForm" onsubmit="submitToWhatsApp(event)">
                 
-                <div class="input-group">
+                <div class="input-field">
                     <label for="fullName">الاسم الكامل:</label>
-                    <input type="text" id="fullName" placeholder="مثال: محمد العلوي" required>
+                    <input type="text" id="fullName" placeholder="مثال: عبد الله الشمري" required>
                 </div>
 
-                <div class="input-group">
-                    <label for="phone">رقم الهاتف:</label>
-                    <input type="tel" id="phone" placeholder="مثال: 0612345678" required>
+                <div class="input-field">
+                    <label for="phone">رقم الجوال:</label>
+                    <input type="tel" id="phone" placeholder="مثال: 0512345678" required>
                 </div>
 
-                <div class="input-group">
+                <div class="input-field">
                     <label for="city">المدينة:</label>
-                    <input type="text" id="city" placeholder="مثال: الدار البيضاء، الرباط..." required>
+                    <input type="text" id="city" placeholder="مثال: الرياض / جدة / الدمام..." required>
                 </div>
 
-                <div class="input-group">
-                    <label for="address">العنوان الكامل:</label>
-                    <input type="text" id="address" placeholder="اسم الحي / الشارع / الرقم..." required>
+                <div class="input-field">
+                    <label for="address">العنوان (الحي / الشارع):</label>
+                    <input type="text" id="address" placeholder="اسم الحي والشارع بالتفصيل..." required>
                 </div>
 
-                <button type="submit" class="btn-submit">
-                    <span>📲 إرسال الطلب عبر الواتساب الآن</span>
+                <button type="submit" class="btn-order">
+                    <span>💬 إرسال الطلب عبر الواتساب</span>
                 </button>
 
             </form>
 
-            <div class="guarantee">
+            <div class="guarantee-bar">
                 <span>🚚 توصيل سريع (1-3 أيام)</span>
                 <span>🤝 الدفع عند الاستلام</span>
             </div>
@@ -353,17 +362,17 @@
     </div>
 
     <script>
-        let selectedOfferText = "عبوة واحدة (199 درهم)";
+        // العرض الافتراضي
+        let currentOffer = "عبوتين - الأكثر طلباً (199 ريال سعودي)";
 
-        function selectOffer(num, price, text) {
-            selectedOfferText = text;
-            document.getElementById('offer1').classList.remove('active');
-            document.getElementById('offer2').classList.remove('active');
-            
-            document.getElementById('offer' + num).classList.add('active');
+        function setOffer(id, price, text) {
+            currentOffer = text;
+            document.getElementById('offer1').classList.remove('selected');
+            document.getElementById('offer2').classList.remove('selected');
+            document.getElementById('offer' + id).classList.add('selected');
         }
 
-        function sendToWhatsApp(event) {
+        function submitToWhatsApp(event) {
             event.preventDefault();
 
             const name = document.getElementById('fullName').value;
@@ -371,23 +380,21 @@
             const city = document.getElementById('city').value;
             const address = document.getElementById('address').value;
 
-            // My WhatsApp Number: 212615519905
-            const whatsappNumber = "212615519905";
+            // رقم الواتساب الخاص بك (بالصيغة الدولية بدون +)
+            const myWhatsappNumber = "212615519905";
 
-            const message = `👋 السلام عليكم، بغيت نطلب سيروم LANEMAY للشعر:
-            
-📦 **العرض المختار:** ${selectedOfferText}
+            const messageText = `🇸🇦 **طلب جديد من المتجر السعودي (سيروم LANEMAY)**
+
+📦 **العرض المختار:** ${currentOffer}
 👤 **الاسم:** ${name}
-📞 **رقم الهاتف:** ${phone}
+📱 **رقم الجوال:** ${phone}
 🏙️ **المدينة:** ${city}
-📍 **العنوان:** ${address}
+📍 **العنوان التفصيلي:** ${address}
 
-شكراً لك!`;
+يرجى تأكيد الطلب وتجهيز الشحن، شكراً لك!`;
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-            window.open(whatsappURL, '_blank');
+            const encodedUrl = `https://wa.me/${myWhatsappNumber}?text=${encodeURIComponent(messageText)}`;
+            window.open(encodedUrl, '_blank');
         }
     </script>
 </body>
