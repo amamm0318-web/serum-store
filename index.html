@@ -287,8 +287,7 @@
         <div class="media-card">
             <div class="video-box">
                 <video id="mainVideo" controls autoplay muted loop playsinline poster="https://ae01.alicdn.com/kf/S2650085ef19349889445100f9899f8f20.jpg">
-                    <source src="https://video.ae.com/video/v/1000039612.mp4" type="video/mp4">
-                    <source src="https://cdn.pixabay.com/video/2021/04/12/70889-536968037_large.mp4" type="video/mp4">
+                    <source src="https://files.catbox.moe/hrf6i0.mp4" type="video/mp4">
                     متصفحك لا يدعم تشغيل الفيديو.
                 </video>
             </div>
@@ -296,107 +295,3 @@
         </div>
 
         <div class="features-box">
-            <h3>🌱 لماذا يفضل عملاؤنا سيروم LANEMAY؟</h3>
-            <ul class="features-list">
-                <li><span>✅</span> <b>تحفيز إنبات الشعر:</b> يعالج الفراغات ويحفز البصيلات الضعيفة.</li>
-                <li><span>✅</span> <b>إيقاف التساقط:</b> يغذي فروة الرأس من الجذور ويقلل التساقط.</li>
-                <li><span>✅</span> <b>تركيبة طبيعية مكثفة:</b> بماء الأرز الأسود العضوي وزيت الروزماري والبيوتين.</li>
-                <li><span>✅</span> <b>آمن تماماً:</b> خالي من السيليكون والبارابين والمواد الكيميائية.</li>
-            </ul>
-        </div>
-
-        <h3 class="section-title">🎁 اختر العرض المناسب لك:</h3>
-
-        <div class="offer-card" onclick="setOffer(1, 129, 'عبوة واحدة (129 ريال سعودي)')" id="offer1">
-            <div class="offer-details">
-                <h4>عبوة واحدة (1 قطعة)</h4>
-                <p>توصيل مجاني لجميع مناطق المملكة</p>
-            </div>
-            <div class="offer-price">129 <small>ر.س</small></div>
-        </div>
-
-        <div class="offer-card selected" onclick="setOffer(2, 199, 'عبوتين - الأكثر طلباً (199 ريال سعودي)')" id="offer2">
-            <span class="popular-badge">الأكثر طلباً في المملكة 🔥</span>
-            <div class="offer-details">
-                <h4>عبوتين (2 قطعة)</h4>
-                <p>وفر 59 ريال + توصيل مجاني</p>
-            </div>
-            <div class="offer-price">199 <small>ر.س</small></div>
-        </div>
-
-        <div class="form-card form-box">
-            <h3>🛒 نموذج الطلب السريع</h3>
-            <form id="saudiOrderForm" onsubmit="submitToWhatsApp(event)">
-                
-                <div class="input-field">
-                    <label for="fullName">الاسم الكامل:</label>
-                    <input type="text" id="fullName" placeholder="مثال: عبد الله الشمري" required>
-                </div>
-
-                <div class="input-field">
-                    <label for="phone">رقم الجوال:</label>
-                    <input type="tel" id="phone" placeholder="مثال: 0512345678" required>
-                </div>
-
-                <div class="input-field">
-                    <label for="city">المدينة:</label>
-                    <input type="text" id="city" placeholder="مثال: الرياض / جدة / الدمام..." required>
-                </div>
-
-                <div class="input-field">
-                    <label for="address">العنوان (الحي / الشارع):</label>
-                    <input type="text" id="address" placeholder="اسم الحي والشارع بالتفصيل..." required>
-                </div>
-
-                <button type="submit" class="btn-order">
-                    <span>💬 إرسال الطلب عبر الواتساب</span>
-                </button>
-
-            </form>
-
-            <div class="guarantee-bar">
-                <span>🚚 توصيل سريع (1-3 أيام)</span>
-                <span>🤝 الدفع عند الاستلام</span>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        // العرض الافتراضي
-        let currentOffer = "عبوتين - الأكثر طلباً (199 ريال سعودي)";
-
-        function setOffer(id, price, text) {
-            currentOffer = text;
-            document.getElementById('offer1').classList.remove('selected');
-            document.getElementById('offer2').classList.remove('selected');
-            document.getElementById('offer' + id).classList.add('selected');
-        }
-
-        function submitToWhatsApp(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('fullName').value;
-            const phone = document.getElementById('phone').value;
-            const city = document.getElementById('city').value;
-            const address = document.getElementById('address').value;
-
-            // رقم الواتساب الخاص بك
-            const myWhatsappNumber = "212615519905";
-
-            const messageText = `🇸🇦 **طلب جديد من المتجر السعودي (سيروم LANEMAY)**
-
-📦 **العرض المختار:** ${currentOffer}
-👤 **الاسم:** ${name}
-📱 **رقم الجوال:** ${phone}
-🏙️ **المدينة:** ${city}
-📍 **العنوان التفصيلي:** ${address}
-
-يرجى تأكيد الطلب وتجهيز الشحن، شكراً لك!`;
-
-            const encodedUrl = `https://wa.me/${myWhatsappNumber}?text=${encodeURIComponent(messageText)}`;
-            window.open(encodedUrl, '_blank');
-        }
-    </script>
-</body>
-</html>
