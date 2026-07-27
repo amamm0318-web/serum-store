@@ -27,7 +27,6 @@
             max-width: 420px;
             height: 100vh;
             max-height: 850px;
-            /* تم تعديل الامتداد إلى image.png ليطابق اسم ملفك */
             background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.85) 100%), 
                         url('image.png') center/cover no-repeat;
             border-radius: 16px;
@@ -95,15 +94,15 @@
         .features-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin: 15px 0;
+            gap: 8px;
+            margin: 10px 0;
         }
 
         .feature-item {
             background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(10px);
             border-right: 4px solid #f39c12;
-            padding: 10px 14px;
+            padding: 9px 12px;
             border-radius: 8px;
             font-size: 13px;
             line-height: 1.4;
@@ -121,11 +120,40 @@
             background: rgba(243, 156, 18, 0.25);
             border: 1px solid #f39c12;
             color: #ffca28;
-            padding: 8px 12px;
+            padding: 6px 12px;
             border-radius: 20px;
             text-align: center;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 12px;
+        }
+
+        /* مربع السعر */
+        .price-container {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.3), rgba(0, 0, 0, 0.5));
+            border: 1px solid #f39c12;
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .price-label {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .price-value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffca28;
+        }
+
+        .price-currency {
+            font-size: 14px;
+            color: #fff;
         }
 
         /* زر الواتساب */
@@ -137,7 +165,7 @@
             background-color: #25D366;
             color: #fff;
             text-decoration: none;
-            padding: 16px;
+            padding: 15px;
             border-radius: 30px;
             font-size: 18px;
             font-weight: bold;
@@ -195,13 +223,24 @@
             </div>
         </div>
 
-        <!-- WhatsApp CTA Button -->
-        <a href="https://wa.me/212615519905?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC%20Propolis%20NutriLab" class="whatsapp-btn" target="_blank">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-            </svg>
-            اطلب الآن عبر واتساب
-        </a>
+        <!-- Price Section & CTA -->
+        <div>
+            <div class="price-container">
+                <span class="price-label">الثمن الخاص:</span>
+                <div>
+                    <span class="price-value">199</span>
+                    <span class="price-currency">درهم</span>
+                </div>
+            </div>
+
+            <!-- WhatsApp CTA Button -->
+            <a href="https://wa.me/212615519905?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC%20Propolis%20NutriLab%20%D8%A8%D8%AB%D9%85%D9%86%20199%20%D8%AF%D8%B1%D9%87%D9%85" class="whatsapp-btn" target="_blank">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                </svg>
+                اطلب الآن عبر واتساب
+            </a>
+        </div>
     </div>
 
 </body>
