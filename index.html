@@ -3,451 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سيروم LANEMAY الأصلي لإنبات وتكثيف الشعر - المملكة العربية السعودية</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-
+    <title>Propolis NutriLab - Story</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: #f8fafc;
-            color: #0f172a;
-            direction: rtl;
-            text-align: right;
-            padding-bottom: 60px;
-            line-height: 1.6;
+            background-color: #0d0d0d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
         }
 
-        /* شريط التوصيل العلوي */
-        .top-bar {
-            background: linear-gradient(90deg, #059669, #10b981);
-            color: #ffffff;
+        /* بطاقة الستوري الأساسية */
+        .story-card {
+            width: 100%;
+            max-width: 420px;
+            height: 100vh;
+            max-height: 850px;
+            /* استبدل image.jpg باسم صورتك المرفوعة */
+            background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.85) 100%), 
+                        url('image.jpg') center/cover no-repeat;
+            border-radius: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        /* شريط تقدم الستوري الفوقاني */
+        .progress-bar-container {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            padding: 0 15px;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            flex: 1;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #f39c12;
+            animation: fillProgress 6s linear infinite;
+        }
+
+        @keyframes fillProgress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* العنوان والرأس */
+        .story-header {
+            margin-top: 20px;
             text-align: center;
-            padding: 12px 15px;
-            font-size: 14px;
-            font-weight: 800;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        /* الحاوية الرئيسية */
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-
-        /* الوسام والعنوان */
-        .badge-wrapper {
-            text-align: center;
-            margin-top: 8px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: #ecfdf5;
-            color: #047857;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 800;
-            border: 1px solid #a7f3d0;
         }
 
         .product-title {
-            font-size: 21px;
-            font-weight: 800;
-            color: #0f172a;
-            text-align: center;
-            margin: 12px 0 16px 0;
+            font-size: 26px;
+            font-weight: bold;
+            color: #f39c12;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .product-subtitle {
+            font-size: 14px;
+            color: #eee;
+            margin-top: 6px;
             line-height: 1.4;
         }
 
-        /* كارت الميديا (الفيديو والصور النقية) */
-        .media-card {
-            background: #ffffff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-            margin-bottom: 20px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .video-box {
-            width: 100%;
-            background: #000000;
-            position: relative;
-        }
-
-        video {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-height: 450px;
-        }
-
-        .video-fallback {
-            text-align: center;
-            padding: 10px;
-            background: #f1f5f9;
-            font-size: 13px;
-            color: #475569;
-        }
-
-        .video-fallback a {
-            color: #059669;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        /* صورة النتائج الأصلية النظيفة (قبل / بعد) */
-        .main-product-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-top: 3px solid #10b981;
-        }
-
-        .img-caption {
-            background: #f0fdf4;
-            color: #047857;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 8px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        /* البطاقات التفصيلية */
-        .card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            border: 1px solid #e2e8f0;
-        }
-
-        .card-title {
-            color: #047857;
-            font-size: 18px;
-            font-weight: 800;
-            margin-bottom: 14px;
-            border-bottom: 2px solid #ecfdf5;
-            padding-bottom: 8px;
-        }
-
         /* قائمة المميزات */
-        .feature-item {
-            padding: 10px 0;
-            border-bottom: 1px dashed #e2e8f0;
-            font-size: 15px;
-            color: #334155;
+        .features-list {
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
             gap: 10px;
+            margin: 15px 0;
         }
 
-        .feature-item:last-child {
-            border-bottom: none;
-        }
-
-        .feature-icon {
-            font-size: 18px;
-        }
-
-        /* خطوات الاستخدام */
-        .step-item {
-            margin-bottom: 12px;
-            background: #f8fafc;
-            padding: 12px;
-            border-radius: 10px;
-            border-right: 4px solid #10b981;
-            font-size: 14px;
-            color: #1e293b;
-        }
-
-        /* خيارات العروض */
-        .offer-option {
-            border: 2px solid #cbd5e1;
-            border-radius: 14px;
-            padding: 16px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #ffffff;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .offer-option.selected {
-            border-color: #10b981;
-            background-color: #f0fdf4;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
-        }
-
-        .popular-tag {
-            position: absolute;
-            top: -11px;
-            left: 15px;
-            background: #ef4444;
-            color: #ffffff;
-            font-size: 11px;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-weight: 800;
-        }
-
-        .offer-info h4 {
-            font-size: 16px;
-            color: #0f172a;
-            font-weight: 700;
-        }
-
-        .offer-info p {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 2px;
-        }
-
-        .offer-price {
-            font-size: 22px;
-            font-weight: 800;
-            color: #059669;
-        }
-
-        .offer-price small {
+        .feature-item {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            border-right: 4px solid #f39c12;
+            padding: 10px 14px;
+            border-radius: 8px;
             font-size: 13px;
+            line-height: 1.4;
         }
 
-        /* نموذج الطلب */
-        .form-card {
-            border: 2px solid #10b981;
-            background: #ffffff;
-        }
-
-        .form-group {
-            margin-bottom: 14px;
-        }
-
-        .form-group label {
+        .feature-item strong {
+            color: #ffca28;
             display: block;
+            margin-bottom: 2px;
             font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: #1e293b;
         }
 
-        .form-group input {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #cbd5e1;
-            border-radius: 10px;
-            font-size: 15px;
-            background-color: #f8fafc;
-            outline: none;
-            transition: 0.2s;
-        }
-
-        .form-group input:focus {
-            border-color: #10b981;
-            background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-        }
-
-        .submit-btn {
-            width: 100%;
-            background-color: #25d366;
-            color: #ffffff;
-            border: none;
-            padding: 16px;
-            font-size: 18px;
-            font-weight: 800;
-            border-radius: 12px;
-            cursor: pointer;
-            margin-top: 10px;
-            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .guarantee {
+        /* شارة الجرعة */
+        .badge {
+            background: rgba(243, 156, 18, 0.25);
+            border: 1px solid #f39c12;
+            color: #ffca28;
+            padding: 8px 12px;
+            border-radius: 20px;
             text-align: center;
-            margin-top: 15px;
+            font-weight: bold;
             font-size: 13px;
-            color: #64748b;
-            font-weight: 700;
+        }
+
+        /* زر الواتساب */
+        .whatsapp-btn {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            text-align: center;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebc57;
+            transform: scale(1.02);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط التوصيل -->
-    <div class="top-bar">
-        🇸🇦 توصيل سريع لجميع مناطق المملكة + الدفع عند الاستلام
+    <div class="story-card">
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+
+        <!-- Header -->
+        <div class="story-header">
+            <h1 class="product-title">Propolis NutriLab</h1>
+            <p class="product-subtitle">مكمل غذائي بعكبر النحل المنقى وفيتامين C لدعم المناعة ومحاربة التعب اليومي</p>
+        </div>
+
+        <!-- Features -->
+        <div class="features-list">
+            <div class="feature-item">
+                <strong>🌿 مضاد أكسدة طبيعي</strong>
+                يحمي الخلايا من الإجهاد التأكسدي.
+            </div>
+            <div class="feature-item">
+                <strong>⚡ تنشيط الجسم</strong>
+                يساعد على محاربة الإجهاد البدني والذهني.
+            </div>
+            <div class="feature-item">
+                <strong>🫁 تحسين التنفس</strong>
+                يدعم الجهاز التنفسي والمسالك التنفسية.
+            </div>
+            <div class="feature-item">
+                <strong>🍃 تصفية الكبد</strong>
+                يساهم في طرد السموم والفضلات من الجسم.
+            </div>
+            <div class="badge">
+                💊 350 mg لكل كبسولة - جرعة مركزة لفعالية ممتازة
+            </div>
+        </div>
+
+        <!-- WhatsApp CTA Button (رقم الهاتف الخاص بك مُضاف هنا) -->
+        <a href="https://wa.me/212615519905?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%D8%AA%D8%AC%20Propolis%20NutriLab" class="whatsapp-btn" target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            اطلب الآن عبر واتساب
+        </a>
     </div>
 
-    <div class="container">
-
-        <div class="badge-wrapper">
-            <span class="badge">🌿 سيروم طبيعي 100% ومضمون</span>
-        </div>
-
-        <h1 class="product-title">سيروم LANEMAY بماء الأرز الأسود والروزماري لإنبات الشعر وتكثيف الفراغات</h1>
-
-        <!-- قسم الميديا (فيديو + صورة HD نقية) -->
-        <div class="media-card">
-            <div class="video-box">
-                <video id="mainVideo" controls playsinline preload="metadata" referrerpolicy="no-referrer" poster="https://ae01.alicdn.com/kf/S2650085ef19349889445100f9899f8f20.jpg">
-                    <source src="https://files.catbox.moe/hrf6i0.mp4" type="video/mp4">
-                    متصفحك لا يدعم تشغيل الفيديو.
-                </video>
-            </div>
-            <div class="video-fallback">
-                ▶️ اضغط على مشغل الفيديو أعلاه لمشاهدة فيديو التجربة الواقعية
-            </div>
-
-            <!-- صورة النتائج النظيفة HD بديلة عن لقطة الشاشة -->
-            <div class="img-caption">✨ نتائج إنبات الشعر قبل وبعد استخدام السيروم</div>
-            <img src="https://ae01.alicdn.com/kf/S2650085ef19349889445100f9899f8f20.jpg" alt="نتائج إنبات الشعر LANEMAY" class="main-product-img" referrerpolicy="no-referrer">
-        </div>
-
-        <!-- مميزات المنتج -->
-        <div class="card">
-            <h3 class="card-title">🌱 لماذا سيروم LANEMAY هو الخيار الأفضل؟</h3>
-            <div class="feature-item">
-                <span class="feature-icon">✅</span>
-                <div><b>تحفيز إنبات الشعر:</b> يعالج الفراغات في المقدمة والوسط ويحفز البصيلات الخاملة.</div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-icon">✅</span>
-                <div><b>إيقاف التساقط:</b> يغذي فروة الرأس من الجذور مباشرة ويقلل تساقط الشعر الشديد.</div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-icon">✅</span>
-                <div><b>مكونات طبيعية 100%:</b> غني بماء الأرز الأسود العضوي، زيت إكليل الجبل (الروزماري)، والسمسم الأسود.</div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-icon">✅</span>
-                <div><b>آمن لكل أنواع الشعر:</b> خالي من السيليكون والبارابين والمواد الكيميائية الضارة.</div>
-            </div>
-        </div>
-
-        <!-- طريقة الاستخدام -->
-        <div class="card">
-            <h3 class="card-title">💡 طريقة الاستخدام للحصول على أفضل نتيجة:</h3>
-            <div class="step-item">
-                <b>1.</b> ضع بضع قطرات من السيروم مباشرة على فروة الرأس (خاصة مناطق الفراغات).
-            </div>
-            <div class="step-item">
-                <b>2.</b> قم بدلك فروة الرأس بأطراف أصابعك لمدة 2 إلى 3 دقائق لإنعاش الدورة الدموية.
-            </div>
-            <div class="step-item">
-                <b>3.</b> يُستخدم مرة إلى مرتين يومياً، ولا يحتاج إلى غسل فوراً.
-            </div>
-        </div>
-
-        <!-- اختيار العروض -->
-        <h3 style="text-align: center; margin-bottom: 12px; font-size: 18px; color: #0f172a;">🎁 اختر العرض المناسب لك:</h3>
-
-        <div class="offer-option" onclick="selectOffer(1, 129, 'عبوة واحدة (129 ريال سعودي)')" id="offer1">
-            <div class="offer-info">
-                <h4>عبوة واحدة (1 قطعة)</h4>
-                <p>توصيل مجاني لجميع مناطق المملكة</p>
-            </div>
-            <div class="offer-price">129 <small>ر.س</small></div>
-        </div>
-
-        <div class="offer-option selected" onclick="selectOffer(2, 199, 'عبوتين - الأكثر طلباً (199 ريال سعودي)')" id="offer2">
-            <span class="popular-tag">الأكثر طلباً 🔥</span>
-            <div class="offer-info">
-                <h4>عبوتين (2 قطعة)</h4>
-                <p>وفر 59 ريال + توصيل مجاني</p>
-            </div>
-            <div class="offer-price">199 <small>ر.س</small></div>
-        </div>
-
-        <!-- نموذج الطلب -->
-        <div class="card form-card">
-            <h3 class="card-title" style="text-align: center; border: none; margin-bottom: 10px;">🛒 نموذج الطلب السريع</h3>
-            
-            <form onsubmit="sendOrder(event)">
-                <div class="form-group">
-                    <label for="cust_name">الاسم الكامل:</label>
-                    <input type="text" id="cust_name" placeholder="مثال: عبد الله الشمري" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cust_phone">رقم الجوال:</label>
-                    <input type="tel" id="cust_phone" placeholder="مثال: 0512345678" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cust_city">المدينة:</label>
-                    <input type="text" id="cust_city" placeholder="مثال: الرياض / جدة / الدمام..." required>
-                </div>
-
-                <div class="form-group">
-                    <label for="cust_address">العنوان التفصيلي:</label>
-                    <input type="text" id="cust_address" placeholder="اسم الحي والشارع..." required>
-                </div>
-
-                <button type="submit" class="submit-btn">
-                    <span>💬 إرسال الطلب عبر الواتساب</span>
-                </button>
-            </form>
-
-            <div class="guarantee">
-                <span>🚚 توصيل خلال 1-3 أيام</span>
-                <span>🤝 الدفع عند الاستلام</span>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        let chosenOffer = "عبوتين - الأكثر طلباً (199 ريال سعودي)";
-
-        function selectOffer(id, price, text) {
-            chosenOffer = text;
-            document.getElementById('offer1').classList.remove('selected');
-            document.getElementById('offer2').classList.remove('selected');
-            document.getElementById('offer' + id).classList.add('selected');
-        }
-
-        function sendOrder(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('cust_name').value;
-            const phone = document.getElementById('cust_phone').value;
-            const city = document.getElementById('cust_city').value;
-            const address = document.getElementById('cust_address').value;
-
-            const myNum = "212615519905";
-
-            const msg = `🇸🇦 *طلب جديد من المتجر (سيروم LANEMAY)*\n\n` +
-                        `📦 *العرض:* ${chosenOffer}\n` +
-                        `👤 *الاسم:* ${name}\n` +
-                        `📱 *الجوال:* ${phone}\n` +
-                        `🏙️ *المدينة:* ${city}\n` +
-                        `📍 *العنوان:* ${address}\n\n` +
-                        `يرجى تأكيد الطلب والشحن، شكراً لك!`;
-
-            const url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(msg);
-            window.open(url, '_blank');
-        }
-    </script>
 </body>
 </html>
